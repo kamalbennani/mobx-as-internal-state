@@ -1,0 +1,10 @@
+.Content {
+  padding: 50px;
+  width: 400px;
+  margin: auto;
+  background: #fff;
+}
+
+.Content + .Content {
+  margin-top: 16px;
+}
