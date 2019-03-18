@@ -4,16 +4,26 @@ import { Button } from "antd";
 import { observer } from "mobx-react";
 import { Label } from './Label';
 
+const appState = observable({
+  count: 0
+});
+
+appState.increment = function() {
+  this.count++;
+}
+
+appState.decrement = function() {
+  this.count--;
+}
+
 @observer
 export class MobxCounterExample extends Component {
-  @observable count = 0;
-  
   increment = () => {
-    this.count++;
+    appState.increment();
   }
-  
+
   decrement = () => {
-    this.count--;
+    appState.decrement();
   }
 
   render() {
@@ -22,7 +32,7 @@ export class MobxCounterExample extends Component {
         <Label>Mobx</Label>
         <Button.Group>
           <Button onClick={this.decrement}>-</Button>
-          <Button disabled>{this.count}</Button>
+          <Button disabled>{appState.count}</Button>
           <Button onClick={this.increment}>+</Button>
         </Button.Group>
       </div>
