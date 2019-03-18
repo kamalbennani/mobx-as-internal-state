@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
+    "start-prez": "mdx-deck deck.mdx",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
@@ -30,6 +31,9 @@
     "@babel/plugin-proposal-decorators": "^7.3.0",
     "babel-plugin-import": "^1.11.0",
     "customize-cra": "^0.2.12",
+    "mdx-deck": "^2.0.0",
+    "mobx-react-devtools": "^6.1.1",
+    "prettier": "^1.16.4",
     "react-app-rewired": "^2.1.1"
   }
 }

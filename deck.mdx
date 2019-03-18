@@ -1,0 +1,17 @@
+export { future as theme } from 'mdx-deck/themes'
+import { Notes } from 'mdx-deck';
+
+Potential replace of `setState`
+
+----
+# Why
+
+- `this.state` should be considered as immutable
+- `setState` is asynchronous
+- `setState` always trigger a re-render
+
+https://reactjs.org/docs/react-component.html#setstate
+
+----
+
+# Mobx
